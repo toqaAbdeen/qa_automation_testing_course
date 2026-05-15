@@ -12,11 +12,14 @@ describe('Practice lesson - Delete product from cart', () => {
         // })
         cy.loginToDemoWorkShop()
         cy.request('POST', 'https://demowebshop.tricentis.com/addproducttocart/catalog/13/1/1')
+        cy.screenshot({capture: "fullPage"}) // to capture the screenshot of the full page after adding the product to the cart
+        cy.screenshot({capture: "viewport"}) // to capture the screenshot of the visible part of the page after adding the product to the cart
+        cy.screenshot({capture: "runner"}) // to capture the screenshot of the test runner after adding the product to the cart 
     })
 
     it("Validate that the user can delete product from cart", () => {
         cy.get('.ico-cart').first().click()
-        cy.get('[name=removefromcart]').check()
+        cy.get('[name="removefromcart"]').check()
         cy.get('.update-cart-button').click()
         cy.get(".cart-qty").should('contain','0')
         cy.get('.order-summary-content').should('contain','Your Shopping Cart is empty!')

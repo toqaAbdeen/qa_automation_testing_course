@@ -66,7 +66,7 @@ describe('Check actions lesson', () => { // scenario name
     })  
     it.only("double-click Command", () => {
         cy.visit("http://127.0.0.1:5500/actionsLesson.html")
-        cy.get("#dblClick").dblclick()
+        cy.get("#dbClick").dblclick()
 
     })
 

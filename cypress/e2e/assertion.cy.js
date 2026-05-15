@@ -30,13 +30,13 @@ describe('Assertion lesson', () => {
     it.only("",() => {
 
         cy.visit("http://127.0.0.1:5500/actionsLesson.html")
-        cy.get("#testField").should("be.empty") // find the input field with the id testField and assert that it is empty
+        cy.get("#myTextField").should("be.empty") // find the input field with the id testField and assert that it is empty
         cy.get("[placeholder='Type your name']").type("Toqa")
         cy.get("#trigger_btn").trigger("mouseover")
         cy.get("#trigger_btn").should("have.css", "background-color", "rgb(255, 255, 0)").and("be.visible").and("contain","Trigger") // find the element with the id trigger_btn and assert that it has the css property background-color with the value rgb(255, 255, 0) and assert that it is visible and it contains the text Trigger
         cy.reload()
         cy.get("[placeholder='Type your name']").should("be.empty")
-        cy.get("#empty").should("be.empty").and("be.visible")
+        cy.get("input[name='input_0']").should("be.empty").and("be.visible")
 
 
     })

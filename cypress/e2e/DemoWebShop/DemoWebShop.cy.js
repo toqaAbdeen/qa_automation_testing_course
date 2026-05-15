@@ -88,14 +88,14 @@ describe('Practice lesson', () => {
     after(() => {
 
         cy.get('.ico-cart').first().click()
-        cy.get('[name=removefromcart]').check()
+        cy.get('[name="removefromcart"]').check()
         cy.get('.update-cart-button').click()
 
 
         // use invoke to get the value of the input from the website and log it in the cypress log
-        cy.get('[name=removefromcart]').invoke('val').then((value) => {
-            cy.log(value) // log the value of the removefromcart input field
-        })
+        // cy.get('[name=removefromcart]').invoke('val').then((value) => {
+        //     cy.log(value) // log the value of the removefromcart input field
+        // })
             // usually when we delete sth we use APIs mean request/response 
         // cy.request('POST','https://demowebshop.tricentis.com/cart',{removefromcart, value}) this is json form
 
