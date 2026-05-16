@@ -11,7 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "^15.14.1",
+    "cypress": "^15.15.0",
     "mocha": "^11.7.5",
     "mochawesome": "^7.1.4",
     "mochawesome-merge": "^5.1.1"
@@ -19,6 +19,7 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
-    "esbuild": "^0.28.0"
+    "esbuild": "^0.28.0",
+    "save-dev": "^0.0.1-security"
   }
 }
